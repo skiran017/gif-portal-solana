@@ -30,12 +30,12 @@ const opts = {
   preflightCommitment: 'processed',
 };
 
-const TEST_GIFS = [
-  'https://media.giphy.com/media/YBJyn5HLPutawWGSex/giphy.gif',
-  'https://media.giphy.com/media/ZyvFtATzLrczE1QE7u/giphy.gif',
-  'https://media.giphy.com/media/3oriNVc5SDHOsWcCM8/giphy.gif',
-  'https://media.giphy.com/media/l0MYtp5naM69x6YbC/giphy.gif',
-];
+// const TEST_GIFS = [
+//   'https://media.giphy.com/media/YBJyn5HLPutawWGSex/giphy.gif',
+//   'https://media.giphy.com/media/ZyvFtATzLrczE1QE7u/giphy.gif',
+//   'https://media.giphy.com/media/3oriNVc5SDHOsWcCM8/giphy.gif',
+//   'https://media.giphy.com/media/l0MYtp5naM69x6YbC/giphy.gif',
+// ];
 
 const App = () => {
   const [walletAddress, setWalletAddress] = useState(null);
@@ -181,6 +181,9 @@ const App = () => {
             {gifList.map((item, index) => (
               <div className="gif-item" key={index}>
                 <img src={item.gifLink} alt={index} />
+                <p className="user-address">
+                  User Public Address: {item.userAddress.toString()}
+                </p>
               </div>
             ))}
           </div>
